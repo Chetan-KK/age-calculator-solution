@@ -79,10 +79,10 @@ function App() {
   return (
     <div className="App">
       <div className="main_card">
-        <form className="main_form flex">
+        <form className="main_form flex" role="form">
           <div className="flex input_field day">
             <label
-              htmlFor="day"
+              htmlFor="dayInput"
               className={
                 dayEmptyErr || dayInvalidErr ? "title titleErr" : "title"
               }
@@ -90,7 +90,9 @@ function App() {
               day
             </label>
             <input
+              aria-label="day"
               type="number"
+              name="dayInput"
               placeholder="DD"
               value={dayInput}
               className={
@@ -109,7 +111,7 @@ function App() {
           </div>
           <div className="flex input_field month">
             <label
-              htmlFor="month"
+              htmlFor="monthInput"
               className={
                 monthEmptyErr || monthInvalidErr ? "title titleErr" : "title"
               }
@@ -118,6 +120,8 @@ function App() {
             </label>
             <input
               type="number"
+              name="monthInput"
+              aria-label="month"
               placeholder="MM"
               value={monthInput}
               className={
@@ -136,7 +140,7 @@ function App() {
           </div>
           <div className="flex input_field year">
             <label
-              htmlFor="year"
+              htmlFor="yearInput"
               className={
                 yearEmptyErr || yearInvalidErr ? "title titleErr" : "title"
               }
@@ -145,6 +149,8 @@ function App() {
             </label>
             <input
               type="number"
+              name="yearInput"
+              aria-label="year"
               placeholder="YYYY"
               className={
                 yearEmptyErr || yearInvalidErr ? "input inputErr" : "input"
@@ -175,10 +181,12 @@ function App() {
               : "submit_button"
           }
           onClick={handleSubmit}
+          aria-label="submit"
+          title="submit"
         >
           <img src={arrowImg} alt="" />
         </button>
-        <div className="results">
+        <div className="results" role="result">
           <div className="flex Num year">
             <span>
               {init ? (
@@ -238,7 +246,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="attribution">
+      <div className="attribution" role="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
           Frontend Mentor
