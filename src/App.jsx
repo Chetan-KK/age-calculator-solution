@@ -79,7 +79,7 @@ function App() {
   return (
     <div className="App">
       <div className="main_card">
-        <form className="main_form flex" role="form">
+        <form className="main_form flex" role="birthInput">
           <div className="flex input_field day">
             <label
               htmlFor="dayInput"
@@ -93,6 +93,7 @@ function App() {
               aria-label="day"
               type="number"
               name="dayInput"
+              id="dayInput"
               placeholder="DD"
               value={dayInput}
               className={
@@ -121,6 +122,7 @@ function App() {
             <input
               type="number"
               name="monthInput"
+              id="monthInput"
               aria-label="month"
               placeholder="MM"
               value={monthInput}
@@ -150,6 +152,7 @@ function App() {
             <input
               type="number"
               name="yearInput"
+              id="yearInput"
               aria-label="year"
               placeholder="YYYY"
               className={
@@ -186,7 +189,7 @@ function App() {
         >
           <img src={arrowImg} alt="" />
         </button>
-        <div className="results" role="result">
+        <div className="results" role="ageOutput">
           <div className="flex Num year">
             <span>
               {init ? (
