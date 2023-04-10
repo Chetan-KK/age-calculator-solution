@@ -1,0 +1,136 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.main_card {
+  background-color: var(--card-bg);
+  width: 34rem;
+  height: 26.5rem;
+  padding: 2.45rem 2.25rem;
+  border-radius: 1.4rem 1.5rem 8rem 1.2rem;
+}
+.main_card .main_form {
+  gap: 1.3rem;
+  margin-bottom: 1.85rem;
+}
+.main_card .main_form .input_field {
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: var(--ff);
+  position: relative;
+}
+.main_card .main_form .input_field .title {
+  text-transform: uppercase;
+  color: var(--sub-fc);
+  letter-spacing: 2px;
+  font-size: 0.6rem;
+  font-family: var(--ff-b);
+  margin-bottom: 5px;
+}
+.main_card .main_form .input_field .titleErr {
+  color: var(--err-c) !important;
+}
+.main_card .main_form .input_field .input {
+  width: 6.5rem;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  border: 1px solid var(--border-c);
+  font-family: var(--ff-b);
+  color: var(--fc);
+  padding: 0.45rem 0.85rem;
+}
+.main_card .main_form .input_field .inputErr {
+  border: 1px solid var(--err-c) !important;
+}
+
+.main_card .main_form .input_field .input:focus {
+  border: 1px solid var(--primary-color);
+  outline: none;
+}
+
+.main_card .main_form .input_field .err {
+  color: var(--err-c);
+  position: absolute;
+  bottom: -18px;
+  font-family: var(--ff-i);
+  font-size: 0.55rem;
+}
+.submit_button {
+  float: right;
+  transform: translateY(-50%);
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 100%;
+  padding: 1rem;
+  width: 4rem;
+  height: 4rem;
+}
+.submit_button:hover {
+  background-color: var(--fc);
+}
+hr {
+  border: none;
+  border-bottom: 1px solid var(--border-c);
+}
+.submit_button img {
+  width: 1.9rem;
+  aspect-ratio: 1;
+}
+.buttonErr {
+  pointer-events: none;
+  background-color: hsl(259, 100%, 86%);
+}
+.results {
+  margin-top: 2rem;
+  font-family: var(--ff-ebi);
+  font-style: italic;
+  color: var(--fc);
+  font-size: 4.1rem;
+  line-height: 4.6rem;
+}
+.results .Num span {
+  margin-right: 0.3rem;
+  color: var(--primary-color);
+}
+
+.attribution {
+  position: fixed;
+  bottom: 10px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 550px) {
+  .main_card {
+    width: 90vw;
+    height: 26.5rem;
+    padding: 2.45rem 1rem;
+  }
+  .main_card .main_form .input_field .input {
+    width: 24vw;
+    font-size: 1rem;
+  }
+  .main_card .main_form {
+    gap: 4vw;
+    margin-bottom: 4rem;
+  }
+  .main_card .main_form .input_field .err {
+    width: max-content;
+    bottom: -15px;
+    font-size: 0.4rem;
+  }
+  .submit_button {
+    float: unset;
+    transform: translate(calc(45vw - 50% - 1rem), -50%);
+  }
+  .results {
+    margin-top: -1rem;
+    font-size: 14vw;
+    line-height: 3.6rem;
+  }
+}

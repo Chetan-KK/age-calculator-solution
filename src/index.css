@@ -1,0 +1,60 @@
+@font-face {
+  font-family: poppins;
+  src: url(./assets/fonts/Poppins-Regular.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: poppinsBold;
+  src: url(./assets/fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+  font-family: poppinsExtraBoldItalic;
+  src: url(./assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+@font-face {
+  font-family: poppinsItalic;
+  src: url(./assets/fonts/Poppins-Italic.ttf);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+:root {
+  --primary-color: hsl(259, 100%, 65%);
+  --bg-c: rgba(240, 240, 240);
+  --fc: #202020;
+  --sub-fc: #646464;
+  --card-bg: #ffffff;
+  --border-c: hsl(0, 0%, 94%);
+  --err-c: hsl(0, 100%, 67%);
+  --ff: poppins;
+  --ff-b: poppinsBold;
+  --ff-ebi: PoppinsExtraBoldItalic;
+  --ff-i: PoppinsItalic;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* box-shadow: 0 0 0 1px black; */
+}
+body {
+  background-color: var(--bg-c);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
