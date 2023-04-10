@@ -79,7 +79,7 @@ function App() {
   return (
     <div className="App">
       <div className="main_card">
-        <form className="main_form flex" role="birthInput">
+        <form className="main_form flex" role="get birth date">
           <div className="flex input_field day">
             <label
               htmlFor="dayInput"
@@ -189,7 +189,7 @@ function App() {
         >
           <img src={arrowImg} alt="" />
         </button>
-        <div className="results" role="ageOutput">
+        <div className="results" role="age output">
           <div className="flex Num year">
             <span>
               {init ? (
@@ -249,7 +249,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="attribution" role="attribution">
+      <div className="attribution" role="connections">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
           Frontend Mentor
